@@ -95,19 +95,19 @@ $(function() {
 
   /* Test suite named "New Feed Selection" */
   describe('New Feed Selection', function() {
-    var $firstFeedEntry1, $firstFeedEntry2;
+    var $feedContent1, $feedContent2;
 
     beforeEach(function(done) {
       var feedToLoad1 = allFeeds[1],
-        feedToLoad2 = allFeeds[2];
+      feedToLoad2 = allFeeds[2];
       // Call loadFeed for the second element in allFeeds
       loadFeed(feedToLoad1.id, function() {
         // Get feed content
-        $firstFeedEntry1 = $('.feed').text();
+        $feedContent1 = $('.feed').text();
         // Call loadFeed for the third element in allFeeds
         loadFeed(feedToLoad2.id, function() {
           // Get feed content for second loaded feed
-          $firstFeedEntry2 = $('.feed').text();
+          $feedContent2 = $('.feed').text();
           done();
         });
       });
@@ -116,8 +116,7 @@ $(function() {
      * by the loadFeed function that the content actually changes.
      */
     it('should change feed content when new feed is loaded', function(done) {
-      console.log($firstFeedEntry1, $firstFeedEntry2)
-      expect($firstFeedEntry1).not.toEqual($firstFeedEntry2);
+      expect($feedContent1).not.toEqual($feedContent2);
       done();
     });
   });
