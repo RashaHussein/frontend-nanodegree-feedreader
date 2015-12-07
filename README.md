@@ -1,3 +1,10 @@
+# How to run the project
+No need for any special setup. Just open idnex.html  the tests will run and Jasmine will show the test results at the bottom of the page.
+
+Tests for this project are unit tests. They check for specific specs, to ensure that feeds load correctly displaying the needed information, loading different feeds for different feed selections. It also ensures that the menu visibility toggels correctly when clicking it.
+
+The tests also have a pending test for a future feature, a like button. It tests that when an article is liked, the like button is styled by adding an "activated" class to it.
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
